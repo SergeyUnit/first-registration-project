@@ -14,9 +14,9 @@ class IndexController extends \app\core\AbstractController
      */
     public function index()
     {
-        if(Auth::guest()){
+        if (Auth::guest()) {
             $this->response->redirect(Route::url('auth'));
-        }else{
+        } else {
             $this->response->redirect(Route::url('task'));
         }
     }
